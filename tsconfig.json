@@ -26,6 +26,9 @@
     "module": "es2020",
     "baseUrl": "./src"
   },
+  "path": {
+    "angular-core": [ "dist/angular-core"]
+  },
   "angularCompilerOptions": {
     "allowSyntheticDefaultImports": true
   }
