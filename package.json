@@ -11,7 +11,8 @@
     "lint": "ng lint",
     "version:patch": "npm --no-git-tag-version version patch",
     "build": "npm i && ng-packagr -p ng-package.json --config ./src/lib/tsconfig.lib.json && node ./cli/copy-files.js",
-    "release": "branch=$(git rev-parse --abbrev-ref HEAD); git push origin `git subtree split --prefix dist $branch`:releases_$branch --force"
+    "release": "branch=$(git rev-parse --abbrev-ref HEAD); git push origin `git subtree split --prefix dist $branch`:releases_$branch --force",
+    "postinstall": "node ./cli/add-pug-loader.js"
   },
   "dependencies": {
     "@angular/animations": "13.3.8",
