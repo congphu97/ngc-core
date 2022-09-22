@@ -5,8 +5,7 @@
     "ng": "ng",
     "lint": "ng lint --type-check",
     "build": "ng-packagr -p ng-package.json && node ./cli/copy-files.js",
-    "release": "git push origin `git subtree split --prefix dist master`:releases --force",
-    "postinstall": "node ./cli/add-pug-loader.js"
+    "release": "git push origin `git subtree split --prefix dist master`:releases --force"
   },
   "private": true,
   "dependencies": {
