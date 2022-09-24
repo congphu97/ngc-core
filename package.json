@@ -9,9 +9,11 @@
     "ng": "node --max-old-space-size=4096 ./node_modules/@angular/cli/bin/ng",
     "ng-packagr": "node --max-old-space-size=4096 ./node_modules/ng-packagr/cli/main.js",
     "lint": "ng lint",
+    "version": "node -e \"console.log(require('./package.json').version);\"",
     "version:patch": "npm --no-git-tag-version version patch",
     "build": "npm i && ng-packagr -p ng-package.json --config ./src/lib/tsconfig.lib.json && node ./cli/copy-files.js",
-    "release": "branch=$(git rev-parse --abbrev-ref HEAD); git push origin `git subtree split --prefix dist $branch`:releases_$branch --force"
+    "release": "branch=$(git rev-parse --abbrev-ref HEAD); git subtree split --prefix dist release_$branch; git push origin -f release_$branch:release_$branch",
+    "tag": "branch=$(git rev-parse --abbrev-ref HEAD) git tag -a $branch; git push origin --tags"
   },
   "dependencies": {
     "@angular/animations": "13.3.8",
