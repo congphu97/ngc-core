@@ -1,6 +1,6 @@
 {
   "name": "angular-core",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Angular Core",
   "license": "MIT",
   "authors": "Cubable Team",
@@ -15,7 +15,7 @@
     "release": "branch=$(git rev-parse --abbrev-ref HEAD); git subtree split --prefix dist release_$branch; git push origin -f release_$branch:release_$branch",
     "tag": "branch=$(git rev-parse --abbrev-ref HEAD) git tag -a $branch; git push origin --tags"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "13.3.8",
     "@angular/cdk": "^13.3.7",
     "@angular/common": "13.3.8",
