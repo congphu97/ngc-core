@@ -1,8 +1,8 @@
 import { HttpClientModule } from '@angular/common/http';
-import { APP_INITIALIZER, Injector, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { CookieService } from 'ngx-cookie-service';
 
 import {
@@ -11,7 +11,6 @@ import {
 	DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
 	MinGreaterThanDirective, NgInitDirective, NgVarDirective
 } from './directives';
-import { appInitializerFactory } from './loaders/app-initializer-factory';
 import './lodash-mixin';
 import {
 	CapitalizeFirstPipe, ClonePipe, CommasPipe,
@@ -28,9 +27,6 @@ import {
 	SafeHtmlPipe, TimeStringPipe, TimerPipe,
 	TrackByFnPipe, UnitPipe
 } from './pipes';
-import {
-	LocaleService
-} from './services';
 
 @NgModule({
 	imports: [ HttpClientModule, RouterModule, BrowserModule, TranslateModule ],
@@ -87,12 +83,12 @@ import {
 		/* End Pipe Inject (Do not remove) */
 	],
 	providers: [
-		{
-			provide		: APP_INITIALIZER,
-			useFactory	: appInitializerFactory,
-			deps		: [ TranslateService, LocaleService, Injector ],
-			multi		: true,
-		},
+		// {
+		// 	provide		: APP_INITIALIZER,
+		// 	useFactory	: appInitializerFactory,
+		// 	deps		: [ TranslateService, LocaleService, Injector ],
+		// 	multi		: true,
+		// },
 
 		CookieService,
 
