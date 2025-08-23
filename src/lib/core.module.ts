@@ -1,9 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
-// import { CookieService } from 'ngx-cookie-service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { CookieService } from 'ngx-cookie-service';
 
 import {
 	AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
@@ -27,6 +27,13 @@ import {
 	SafeHtmlPipe, TimeStringPipe, TimerPipe,
 	TrackByFnPipe, UnitPipe
 } from './pipes';
+import {
+	ApiService, CanDeactivateGuardService, LocaleService,
+	LoopService, MediaService, NetworkService,
+	PageService, ServiceWorkerService, SharedService,
+	StorageService, WebNotificationService, WebSocketService
+} from './services';
+import { appInitializerFactory } from 'public_api';
 
 @NgModule({
 	imports: [ HttpClientModule, RouterModule, BrowserModule, TranslateModule ],
@@ -83,20 +90,20 @@ import {
 		/* End Pipe Inject (Do not remove) */
 	],
 	providers: [
-		// {
-		// 	provide		: APP_INITIALIZER,
-		// 	useFactory	: appInitializerFactory,
-		// 	deps		: [ TranslateService, LocaleService, Injector ],
-		// 	multi		: true,
-		// },
+		{
+			provide		: APP_INITIALIZER,
+			useFactory	: appInitializerFactory,
+			deps		: [ TranslateService, LocaleService, Injector ],
+			multi		: true,
+		},
 
-		// CookieService,
+		CookieService,
 
 		/* Service Inject (Do not remove) */
-		// ApiService, CanDeactivateGuardService, LocaleService,
-		// LoopService, MediaService, NetworkService,
-		// PageService, ServiceWorkerService, SharedService,
-		// StorageService, WebNotificationService, WebSocketService,
+		ApiService, CanDeactivateGuardService, LocaleService,
+		LoopService, MediaService, NetworkService,
+		PageService, ServiceWorkerService, SharedService,
+		StorageService, WebNotificationService, WebSocketService,
 		/* End Service Inject (Do not remove) */
 	],
 })
