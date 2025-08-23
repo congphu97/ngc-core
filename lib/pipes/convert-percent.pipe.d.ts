@@ -9,5 +9,5 @@ export declare class ConvertPercentPipe implements PipeTransform {
      */
     transform(input: number, max?: number, digits?: number): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<ConvertPercentPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<ConvertPercentPipe, "convertPercent">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<ConvertPercentPipe, "convertPercent", false>;
 }

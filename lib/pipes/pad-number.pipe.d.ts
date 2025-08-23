@@ -8,5 +8,5 @@ export declare class PadNumberPipe implements PipeTransform {
      */
     transform(input: number, size: number): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<PadNumberPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<PadNumberPipe, "padNumber">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<PadNumberPipe, "padNumber", false>;
 }

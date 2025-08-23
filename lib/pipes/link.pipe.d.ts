@@ -7,5 +7,5 @@ export declare class LinkPipe implements PipeTransform {
      */
     transform(link: string): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<LinkPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<LinkPipe, "link">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<LinkPipe, "link", false>;
 }

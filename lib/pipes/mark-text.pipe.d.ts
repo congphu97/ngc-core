@@ -10,5 +10,5 @@ export declare class MarkTextPipe implements PipeTransform {
      */
     transform(html: string, markText: string, isSearchMode?: boolean, isEscapeHtmlTags?: boolean): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MarkTextPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<MarkTextPipe, "markText">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<MarkTextPipe, "markText", false>;
 }

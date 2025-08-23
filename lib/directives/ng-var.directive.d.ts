@@ -16,5 +16,5 @@ export declare class NgVarDirective {
      */
     private _updateView;
     static ɵfac: i0.ɵɵFactoryDeclaration<NgVarDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<NgVarDirective, "[ngVar]", ["ngVar"], { "ngVar": "ngVar"; }, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<NgVarDirective, "[ngVar]", ["ngVar"], { "ngVar": "ngVar"; }, {}, never, never, false>;
 }

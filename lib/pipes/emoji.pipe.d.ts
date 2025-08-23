@@ -7,5 +7,5 @@ export declare class EmojiPipe implements PipeTransform {
      */
     transform(unified: string): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<EmojiPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<EmojiPipe, "emoji">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<EmojiPipe, "emoji", false>;
 }

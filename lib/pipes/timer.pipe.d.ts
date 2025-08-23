@@ -7,5 +7,5 @@ export declare class TimerPipe implements PipeTransform {
      */
     transform(miliseconds: number): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<TimerPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<TimerPipe, "timer">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<TimerPipe, "timer", false>;
 }

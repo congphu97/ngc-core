@@ -7,5 +7,5 @@ export declare class IsFinitePipe implements PipeTransform {
      */
     transform(num: number): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<IsFinitePipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<IsFinitePipe, "isFinite">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<IsFinitePipe, "isFinite", false>;
 }

@@ -8,5 +8,5 @@ export declare class UnitPipe implements PipeTransform {
      */
     transform(num: number, unit?: string): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<UnitPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<UnitPipe, "unit">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<UnitPipe, "unit", false>;
 }

@@ -8,5 +8,5 @@ export declare class CapitalizeFirstPipe extends EmptyPipe implements PipeTransf
      */
     transform(value: string): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<CapitalizeFirstPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<CapitalizeFirstPipe, "capitalizeFirst">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<CapitalizeFirstPipe, "capitalizeFirst", false>;
 }

@@ -3086,7 +3086,7 @@ CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
         PageService, ServiceWorkerService, SharedService,
         StorageService, WebNotificationService, WebSocketService,
         /* End Service Inject (Do not remove) */
-    ], imports: [[HttpClientModule, RouterModule, BrowserModule, TranslateModule], BrowserModule, TranslateModule] });
+    ], imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule, BrowserModule, TranslateModule] });
 (function () {
     (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CoreModule, [{
             type: NgModule,

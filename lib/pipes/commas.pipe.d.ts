@@ -8,5 +8,5 @@ export declare class CommasPipe implements PipeTransform {
      */
     transform(input: number, isAddZero?: boolean): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<CommasPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<CommasPipe, "commas">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<CommasPipe, "commas", false>;
 }

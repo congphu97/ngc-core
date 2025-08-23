@@ -8,5 +8,5 @@ export declare class IncludesPipe implements PipeTransform {
      */
     transform(arr: any[], item: any): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<IncludesPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<IncludesPipe, "includes">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<IncludesPipe, "includes", false>;
 }

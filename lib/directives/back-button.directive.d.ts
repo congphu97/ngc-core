@@ -9,5 +9,5 @@ export declare class BackButtonDirective {
     constructor(_location: Location);
     triggerClick(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<BackButtonDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<BackButtonDirective, "[backButton]", ["backButton"], {}, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<BackButtonDirective, "[backButton]", ["backButton"], {}, {}, never, never, false>;
 }

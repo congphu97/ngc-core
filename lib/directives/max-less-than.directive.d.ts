@@ -1,4 +1,4 @@
-import { Validator, FormControl } from '@angular/forms';
+import { Validator, UntypedFormControl } from '@angular/forms';
 import * as i0 from "@angular/core";
 export declare class MaxLessThanDirective implements Validator {
     maxLessThan: number;
@@ -6,9 +6,9 @@ export declare class MaxLessThanDirective implements Validator {
      * @param {FormControl} c
      * @return {any}
      */
-    validate(c: FormControl): {
+    validate(c: UntypedFormControl): {
         [key: string]: any;
     };
     static ɵfac: i0.ɵɵFactoryDeclaration<MaxLessThanDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<MaxLessThanDirective, "[maxLessThan][formControlName],[maxLessThan][formControl],[maxLessThan][ngModel]", never, { "maxLessThan": "maxLessThan"; }, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<MaxLessThanDirective, "[maxLessThan][formControlName],[maxLessThan][formControl],[maxLessThan][ngModel]", never, { "maxLessThan": "maxLessThan"; }, {}, never, never, false>;
 }

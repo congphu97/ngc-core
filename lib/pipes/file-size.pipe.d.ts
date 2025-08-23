@@ -8,5 +8,5 @@ export declare class FileSizePipe implements PipeTransform {
      */
     transform(input: number, isAddZero?: boolean): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<FileSizePipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<FileSizePipe, "fileSize">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<FileSizePipe, "fileSize", false>;
 }

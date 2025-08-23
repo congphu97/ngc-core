@@ -13,5 +13,5 @@ export declare class AspectRatioDirective implements AfterContentChecked {
      */
     ngAfterContentChecked(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<AspectRatioDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<AspectRatioDirective, "[aspectRatio]", ["aspectRatio"], { "aspectRatio": "aspectRatio"; }, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<AspectRatioDirective, "[aspectRatio]", ["aspectRatio"], { "aspectRatio": "aspectRatio"; }, {}, never, never, false>;
 }

@@ -8,5 +8,5 @@ export declare class KUnitPipe implements PipeTransform {
      */
     transform(input: number, isAddZero?: boolean): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<KUnitPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<KUnitPipe, "kUnit">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<KUnitPipe, "kUnit", false>;
 }

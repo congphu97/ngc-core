@@ -9,5 +9,5 @@ export declare class FindPipe implements PipeTransform {
      */
     transform(items: any[], key: any, matchValue: any): any;
     static ɵfac: i0.ɵɵFactoryDeclaration<FindPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<FindPipe, "find">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<FindPipe, "find", false>;
 }

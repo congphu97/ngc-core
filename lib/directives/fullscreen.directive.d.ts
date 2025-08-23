@@ -22,5 +22,5 @@ export declare class FullscreenDirective {
      */
     off(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<FullscreenDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<FullscreenDirective, "[fullscreen]", ["fullscreen"], {}, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<FullscreenDirective, "[fullscreen]", ["fullscreen"], {}, {}, never, never, false>;
 }
