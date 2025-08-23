@@ -1,6 +1,6 @@
 {
   "name": "angular-core",
-  "version": "2.2.1",
+  "version": "2.2.6",
   "description": "Angular Core",
   "license": "MIT",
   "authors": "Cubable Team",
@@ -13,7 +13,7 @@
     "build": "npm i  --force && ng-packagr -p ng-package.json --config ./src/lib/tsconfig.lib.json && node ./cli/copy-files.js",
     "release": "branch=$(git rev-parse --abbrev-ref HEAD); git push origin `git subtree split --prefix dist $branch`:releases_$branch --force",
     "tag": "branch=$(git rev-parse --abbrev-ref HEAD) && git tag -a $branch -m 'Tagging branch $branch' && git push origin --tags",
-"deploy:dist": "npm run build && git add . && git commit -m \"chore: build dist v$npm_package_version\" && git subtree push --prefix dist origin gh-pages"   
+  "release:dist": "VERSION=$(node -p \"require('./package.json').version\") && git push origin $(git subtree split --prefix=dist $(git symbolic-ref --short HEAD)):refs/tags/v$VERSION --force"
   },
   "dependencies": {
     "@angular/animations": "14.3.0",
@@ -37,7 +37,7 @@
     "moment": "^2.23.0",
     "moment-timezone": "^0.5.14",
     "ngx-cookie-service": "^13.2.1",
-    "rxjs": "^6.5.5",
+    "rxjs": "7.5.7",
     "socket.io-client": "^4.0.1",
     "tslib": "^2.4.0",
     "zone.js": "~0.11.4"
