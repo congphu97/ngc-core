@@ -7,5 +7,5 @@ export declare class FlagIconPipe implements PipeTransform {
      */
     transform(countryCode: string): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<FlagIconPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<FlagIconPipe, "flagIcon">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<FlagIconPipe, "flagIcon", false>;
 }

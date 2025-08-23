@@ -14,5 +14,5 @@ export declare class SafeHtmlPipe implements PipeTransform {
      */
     transform(value: string): SafeHtml;
     static ɵfac: i0.ɵɵFactoryDeclaration<SafeHtmlPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<SafeHtmlPipe, "safeHtml">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<SafeHtmlPipe, "safeHtml", false>;
 }

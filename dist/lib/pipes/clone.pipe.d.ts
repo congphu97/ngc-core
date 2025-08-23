@@ -8,5 +8,5 @@ export declare class ClonePipe implements PipeTransform {
      */
     transform(data: any, isDeep?: boolean): any;
     static ɵfac: i0.ɵɵFactoryDeclaration<ClonePipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<ClonePipe, "clone">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<ClonePipe, "clone", false>;
 }

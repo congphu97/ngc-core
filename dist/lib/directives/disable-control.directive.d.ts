@@ -12,5 +12,5 @@ export declare class DisableControlDirective {
      */
     constructor(_ngControl: NgControl, _cdRef: ChangeDetectorRef);
     static ɵfac: i0.ɵɵFactoryDeclaration<DisableControlDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<DisableControlDirective, "[disableControl]", ["disableControl"], { "disableControl": "disableControl"; }, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<DisableControlDirective, "[disableControl]", ["disableControl"], { "disableControl": "disableControl"; }, {}, never, never, false>;
 }

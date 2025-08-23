@@ -8,5 +8,5 @@ export declare class MomentFromNowPipe extends EmptyPipe implements PipeTransfor
      */
     transform(input: any): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MomentFromNowPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<MomentFromNowPipe, "momentFromNow">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<MomentFromNowPipe, "momentFromNow", false>;
 }

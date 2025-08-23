@@ -8,5 +8,5 @@ export declare class IsContrastPipe implements PipeTransform {
      */
     transform(hex: string): boolean;
     static ɵfac: i0.ɵɵFactoryDeclaration<IsContrastPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<IsContrastPipe, "isContrast">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<IsContrastPipe, "isContrast", false>;
 }

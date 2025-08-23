@@ -8,5 +8,5 @@ export declare class EmptyPipe implements PipeTransform {
      */
     transform(value?: any, emptyStr?: string): any;
     static ɵfac: i0.ɵɵFactoryDeclaration<EmptyPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<EmptyPipe, "empty">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<EmptyPipe, "empty", false>;
 }

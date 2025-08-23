@@ -16,5 +16,5 @@ export declare class AutoFocusDirective implements AfterViewInit {
      */
     ngAfterViewInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<AutoFocusDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<AutoFocusDirective, "[autoFocusOn]", ["autoFocusOn"], { "delay": "delay"; "disableControl": "disableControl"; "disabled": "disabled"; "autoFocusOn": "autoFocusOn"; }, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<AutoFocusDirective, "[autoFocusOn]", ["autoFocusOn"], { "delay": "delay"; "disableControl": "disableControl"; "disabled": "disabled"; "autoFocusOn": "autoFocusOn"; }, {}, never, never, false>;
 }

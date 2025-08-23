@@ -12,5 +12,5 @@ export declare class AdjustFontsizeDirective implements AfterContentChecked {
      */
     ngAfterContentChecked(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<AdjustFontsizeDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<AdjustFontsizeDirective, "[adjustFontsize]", ["adjustFontsize"], {}, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<AdjustFontsizeDirective, "[adjustFontsize]", ["adjustFontsize"], {}, {}, never, never, false>;
 }

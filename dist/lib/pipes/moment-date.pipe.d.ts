@@ -17,5 +17,5 @@ export declare class MomentDatePipe extends EmptyPipe implements PipeTransform {
      */
     transform(input: any, format?: string, showTime?: boolean): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<MomentDatePipe, [{ optional: true; }]>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<MomentDatePipe, "momentDate">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<MomentDatePipe, "momentDate", false>;
 }

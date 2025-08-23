@@ -8,5 +8,5 @@ export declare class NgInitDirective implements OnInit {
      */
     ngOnInit(): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<NgInitDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<NgInitDirective, "[ngInit]", ["ngInit"], { "_ngInit": "_ngInit"; }, { "_resultChange": "_resultChange"; }, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<NgInitDirective, "[ngInit]", ["ngInit"], { "_ngInit": "_ngInit"; }, { "_resultChange": "_resultChange"; }, never, never, false>;
 }

@@ -13,5 +13,5 @@ export declare class OrderByPipe implements PipeTransform {
      */
     private _orderByComparator;
     static ɵfac: i0.ɵɵFactoryDeclaration<OrderByPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<OrderByPipe, "orderBy">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<OrderByPipe, "orderBy", false>;
 }

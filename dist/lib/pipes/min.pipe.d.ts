@@ -8,5 +8,5 @@ export declare class MinPipe implements PipeTransform {
      */
     transform(items: any[], field: string): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<MinPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<MinPipe, "min">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<MinPipe, "min", false>;
 }

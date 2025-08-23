@@ -7,5 +7,5 @@ export declare class HourMeridiemPipe implements PipeTransform {
      */
     transform(hour: number): string;
     static ɵfac: i0.ɵɵFactoryDeclaration<HourMeridiemPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<HourMeridiemPipe, "hourMeridiem">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<HourMeridiemPipe, "hourMeridiem", false>;
 }

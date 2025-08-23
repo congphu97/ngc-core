@@ -9,5 +9,5 @@ export declare class TrackByFnPipe implements PipeTransform {
         [key: string]: any;
     }) => any;
     static ɵfac: i0.ɵɵFactoryDeclaration<TrackByFnPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<TrackByFnPipe, "trackByFn">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<TrackByFnPipe, "trackByFn", false>;
 }

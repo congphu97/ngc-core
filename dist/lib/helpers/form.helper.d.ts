@@ -1,4 +1,4 @@
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 export declare class FormHelper {
     /**
      * @static
@@ -12,5 +12,5 @@ export declare class FormHelper {
      * @param {boolean=} resetValue - Flag to reset value
      * @return {void}
      */
-    static resetForm(form: FormGroup, resetValue?: boolean): void;
+    static resetForm(form: UntypedFormGroup, resetValue?: boolean): void;
 }

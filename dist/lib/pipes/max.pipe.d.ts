@@ -8,5 +8,5 @@ export declare class MaxPipe implements PipeTransform {
      */
     transform(items: any[], field: string): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<MaxPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<MaxPipe, "max">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<MaxPipe, "max", false>;
 }

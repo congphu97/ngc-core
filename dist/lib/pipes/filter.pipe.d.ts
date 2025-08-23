@@ -10,5 +10,5 @@ export declare class FilterPipe implements PipeTransform {
      */
     transform(items: any[], key: any, matchValue: any, diffComparison?: boolean): any[];
     static ɵfac: i0.ɵɵFactoryDeclaration<FilterPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<FilterPipe, "filter">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<FilterPipe, "filter", false>;
 }

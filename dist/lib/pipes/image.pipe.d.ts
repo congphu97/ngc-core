@@ -9,5 +9,5 @@ export declare class ImagePipe implements PipeTransform {
      */
     transform(url: string, defaultImage: string): Observable<string>;
     static ɵfac: i0.ɵɵFactoryDeclaration<ImagePipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<ImagePipe, "image">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<ImagePipe, "image", false>;
 }

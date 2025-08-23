@@ -8,5 +8,5 @@ export declare class FixedPipe implements PipeTransform {
      */
     transform(input: number, digits?: number): number;
     static ɵfac: i0.ɵɵFactoryDeclaration<FixedPipe, never>;
-    static ɵpipe: i0.ɵɵPipeDeclaration<FixedPipe, "fixed">;
+    static ɵpipe: i0.ɵɵPipeDeclaration<FixedPipe, "fixed", false>;
 }

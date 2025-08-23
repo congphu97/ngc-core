@@ -57,5 +57,5 @@ export declare class DetectScrollDirective implements AfterViewInit {
      */
     private _detectScroll;
     static ɵfac: i0.ɵɵFactoryDeclaration<DetectScrollDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<DetectScrollDirective, "[detectScroll]", ["detectScroll"], { "delay": "delay"; "offset": "offset"; }, { "scrolling": "scrolling"; "scrollingX": "scrollingX"; "scrollingY": "scrollingY"; "scrollingUp": "scrollingUp"; "scrollingDown": "scrollingDown"; "scrollingLeft": "scrollingLeft"; "scrollingRight": "scrollingRight"; "scrollReachTop": "scrollReachTop"; "scrollReachBottom": "scrollReachBottom"; "scrollReachLeft": "scrollReachLeft"; "scrollReachRight": "scrollReachRight"; }, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<DetectScrollDirective, "[detectScroll]", ["detectScroll"], { "delay": "delay"; "offset": "offset"; }, { "scrolling": "scrolling"; "scrollingX": "scrollingX"; "scrollingY": "scrollingY"; "scrollingUp": "scrollingUp"; "scrollingDown": "scrollingDown"; "scrollingLeft": "scrollingLeft"; "scrollingRight": "scrollingRight"; "scrollReachTop": "scrollReachTop"; "scrollReachBottom": "scrollReachBottom"; "scrollReachLeft": "scrollReachLeft"; "scrollReachRight": "scrollReachRight"; }, never, never, false>;
 }
