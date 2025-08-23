@@ -1,12 +1,12 @@
 import { Directive, OnInit, OnDestroy, Input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 import { DefaultValue, CoerceNumber } from '../decorators';
 
 @Directive({ selector: '[autoReset]', exportAs: 'autoReset' })
 export class AutoResetDirective implements OnInit, OnDestroy {
 
-	@Input() public formControl: FormControl;
+	@Input() public formControl: UntypedFormControl;
 	@Input() @DefaultValue() @CoerceNumber() public delay: number = 0;
 	@Input() @DefaultValue() public autoReset: 'init' | 'destroy' = 'init';
 

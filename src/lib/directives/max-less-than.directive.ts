@@ -1,5 +1,5 @@
 import { Directive, Input } from '@angular/core';
-import { NG_VALIDATORS, Validator, FormControl } from '@angular/forms';
+import { NG_VALIDATORS, Validator, UntypedFormControl } from '@angular/forms';
 
 @Directive({
 	selector	: '[maxLessThan][formControlName],[maxLessThan][formControl],[maxLessThan][ngModel]',
@@ -13,7 +13,7 @@ export class MaxLessThanDirective implements Validator {
 	 * @param {FormControl} c
 	 * @return {any}
 	 */
-	public validate( c: FormControl ): { [ key: string ]: any } {
+	public validate( c: UntypedFormControl ): { [ key: string ]: any } {
 		const v: number = c.value;
 
 		return v >= this.maxLessThan

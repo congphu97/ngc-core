@@ -1,4 +1,4 @@
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import _ from 'lodash';
 
 // @dynamic
@@ -33,7 +33,7 @@ export class FormHelper {
 	 * @param {boolean=} resetValue - Flag to reset value
 	 * @return {void}
 	 */
-	public static resetForm( form: FormGroup, resetValue: boolean = false ) {
+	public static resetForm( form: UntypedFormGroup, resetValue: boolean = false ) {
 		resetValue && form.reset();
 		form.markAsPristine();
 		form.markAsUntouched();

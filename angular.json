@@ -33,7 +33,6 @@
       }
     }
   },
-  "defaultProject": "lib",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
