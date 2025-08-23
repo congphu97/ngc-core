@@ -22,7 +22,7 @@ export * from './decorators';
 export * from './resources';
 
 // Injection Tokens
-// export * from './injection-token';
+export * from './injection-token';
 
 // Loaders
 export * from './loaders';

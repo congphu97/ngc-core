@@ -1,22 +1,24 @@
-import { NgModule, APP_INITIALIZER, Injector } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { APP_INITIALIZER, Injector, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CookieService } from 'ngx-cookie-service';
 
-import './lodash-mixin';
-import { appInitializerFactory } from './loaders/app-initializer-factory';
 import {
 	AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
 	AutoResetDirective, BackButtonDirective, DetectScrollDirective,
 	DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
 	MinGreaterThanDirective, NgInitDirective, NgVarDirective
 } from './directives';
+import { appInitializerFactory } from './loaders/app-initializer-factory';
+import './lodash-mixin';
 import {
 	CapitalizeFirstPipe, ClonePipe, CommasPipe,
 	ConvertPercentPipe, EmojiPipe, EmptyPipe,
-	FileSizePipe, FilterPipe, Filter2Pipe,
+	FileSizePipe,
+	Filter2Pipe,
+	FilterPipe,
 	FindPipe, FixedPipe, FlagIconPipe,
 	HourMeridiemPipe, ImagePipe, IncludesPipe,
 	IsContrastPipe, IsFinitePipe, KUnitPipe,
@@ -27,10 +29,7 @@ import {
 	TrackByFnPipe, UnitPipe
 } from './pipes';
 import {
-	ApiService, CanDeactivateGuardService, LocaleService,
-	LoopService, MediaService, NetworkService,
-	PageService, ServiceWorkerService, SharedService,
-	StorageService, WebNotificationService, WebSocketService
+	LocaleService
 } from './services';
 
 @NgModule({
@@ -98,10 +97,10 @@ import {
 		CookieService,
 
 		/* Service Inject (Do not remove) */
-		ApiService, CanDeactivateGuardService, LocaleService,
-		LoopService, MediaService, NetworkService,
-		PageService, ServiceWorkerService, SharedService,
-		StorageService, WebNotificationService, WebSocketService,
+		// ApiService, CanDeactivateGuardService, LocaleService,
+		// LoopService, MediaService, NetworkService,
+		// PageService, ServiceWorkerService, SharedService,
+		// StorageService, WebNotificationService, WebSocketService,
 		/* End Service Inject (Do not remove) */
 	],
 })
