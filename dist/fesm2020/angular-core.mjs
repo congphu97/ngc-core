@@ -1,25 +1,26 @@
-import { Observable, Subject, forkJoin, ReplaySubject, merge, fromEvent, interval, Subscription, BehaviorSubject } from 'rxjs';
+import { Observable, Subject, ReplaySubject, merge, fromEvent, interval, Subscription, BehaviorSubject, forkJoin } from 'rxjs';
 import CryptoJS from 'crypto-js';
 import moment from 'moment-timezone';
 import _ from 'lodash';
 import * as i1$4 from '@angular/common/http';
-import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { HttpHeaders, HttpClientModule } from '@angular/common/http';
 import * as i0 from '@angular/core';
-import { Directive, Input, HostListener, EventEmitter, Output, Pipe, InjectionToken, Optional, Inject, NgModule, isDevMode, Injectable } from '@angular/core';
+import { Directive, Input, HostListener, EventEmitter, Output, Pipe, InjectionToken, Optional, Inject, Injectable, APP_INITIALIZER, Injector, NgModule, isDevMode } from '@angular/core';
 import * as i1$2 from '@angular/platform-browser';
 import { BrowserModule } from '@angular/platform-browser';
 import * as i1$6 from '@angular/router';
 import { RouterModule } from '@angular/router';
 import * as i1$5 from '@ngx-translate/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import * as i1$3 from 'ngx-cookie-service';
+import { CookieService } from 'ngx-cookie-service';
 import { __decorate, __metadata } from 'tslib';
 import { coerceArray, coerceBooleanProperty, coerceCssPixelValue, coerceElement, coerceNumberProperty } from '@angular/cdk/coercion';
-import { takeUntil, take, map, takeWhile, finalize, filter, single } from 'rxjs/operators';
+import { takeUntil, takeWhile, take, finalize, map, filter, single } from 'rxjs/operators';
 import * as i1$1 from '@angular/forms';
 import { NG_VALIDATORS } from '@angular/forms';
 import * as i1 from '@angular/common';
 import { PercentPipe, LOCATION_INITIALIZED } from '@angular/common';
-import * as i1$3 from 'ngx-cookie-service';
 import vi from 'moment/locale/vi';
 import * as i1$7 from '@angular/service-worker';
 import io from 'socket.io-client';
@@ -2021,211 +2022,6 @@ __decorate([
         args: [{ name: 'unit' }]
     }], null, { transform: [] }); })();
 
-class CoreModule {
-}
-CoreModule.ɵfac = function CoreModule_Factory(t) { return new (t || CoreModule)(); };
-CoreModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CoreModule });
-CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule, BrowserModule, TranslateModule] });
-(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CoreModule, [{
-        type: NgModule,
-        args: [{
-                imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule],
-                exports: [
-                    BrowserModule, TranslateModule,
-                    /* Component Inject (Do not remove) */
-                    /* End Component Inject (Do not remove) */
-                    /* Directive Inject (Do not remove) */
-                    AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
-                    AutoResetDirective, BackButtonDirective, DetectScrollDirective,
-                    DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
-                    MinGreaterThanDirective, NgInitDirective, NgVarDirective,
-                    /* End Directive Inject (Do not remove) */
-                    /* Pipe Inject (Do not remove) */
-                    CapitalizeFirstPipe, ClonePipe, CommasPipe,
-                    ConvertPercentPipe, EmojiPipe, EmptyPipe,
-                    FileSizePipe, FilterPipe, Filter2Pipe,
-                    FindPipe, FixedPipe, FlagIconPipe,
-                    HourMeridiemPipe, ImagePipe, IncludesPipe,
-                    IsContrastPipe, IsFinitePipe, KUnitPipe,
-                    LinkPipe, MarkTextPipe, MaxPipe,
-                    MinPipe, MomentDatePipe, MomentFromNowPipe,
-                    OrderByPipe, PadNumberPipe, Percent2Pipe,
-                    SafeHtmlPipe, TimeStringPipe, TimerPipe,
-                    TrackByFnPipe, UnitPipe,
-                    /* End Pipe Inject (Do not remove) */
-                ],
-                declarations: [
-                    /* Component Inject (Do not remove) */
-                    /* End Component Inject (Do not remove) */
-                    /* Directive Inject (Do not remove) */
-                    AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
-                    AutoResetDirective, BackButtonDirective, DetectScrollDirective,
-                    DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
-                    MinGreaterThanDirective, NgInitDirective, NgVarDirective,
-                    /* End Directive Inject (Do not remove) */
-                    /* Pipe Inject (Do not remove) */
-                    CapitalizeFirstPipe, ClonePipe, CommasPipe,
-                    ConvertPercentPipe, EmojiPipe, EmptyPipe,
-                    FileSizePipe, FilterPipe, Filter2Pipe,
-                    FindPipe, FixedPipe, FlagIconPipe,
-                    HourMeridiemPipe, ImagePipe, IncludesPipe,
-                    IsContrastPipe, IsFinitePipe, KUnitPipe,
-                    LinkPipe, MarkTextPipe, MaxPipe,
-                    MinPipe, MomentDatePipe, MomentFromNowPipe,
-                    OrderByPipe, PadNumberPipe, Percent2Pipe,
-                    SafeHtmlPipe, TimeStringPipe, TimerPipe,
-                    TrackByFnPipe, UnitPipe,
-                    /* End Pipe Inject (Do not remove) */
-                ],
-                providers: [
-                // {
-                // 	provide		: APP_INITIALIZER,
-                // 	useFactory	: appInitializerFactory,
-                // 	deps		: [ TranslateService, LocaleService, Injector ],
-                // 	multi		: true,
-                // },
-                // CookieService,
-                /* Service Inject (Do not remove) */
-                // ApiService, CanDeactivateGuardService, LocaleService,
-                // LoopService, MediaService, NetworkService,
-                // PageService, ServiceWorkerService, SharedService,
-                // StorageService, WebNotificationService, WebSocketService,
-                /* End Service Inject (Do not remove) */
-                ],
-            }]
-    }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CoreModule, { declarations: [
-        /* Component Inject (Do not remove) */
-        /* End Component Inject (Do not remove) */
-        /* Directive Inject (Do not remove) */
-        AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
-        AutoResetDirective, BackButtonDirective, DetectScrollDirective,
-        DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
-        MinGreaterThanDirective, NgInitDirective, NgVarDirective,
-        /* End Directive Inject (Do not remove) */
-        /* Pipe Inject (Do not remove) */
-        CapitalizeFirstPipe, ClonePipe, CommasPipe,
-        ConvertPercentPipe, EmojiPipe, EmptyPipe,
-        FileSizePipe, FilterPipe, Filter2Pipe,
-        FindPipe, FixedPipe, FlagIconPipe,
-        HourMeridiemPipe, ImagePipe, IncludesPipe,
-        IsContrastPipe, IsFinitePipe, KUnitPipe,
-        LinkPipe, MarkTextPipe, MaxPipe,
-        MinPipe, MomentDatePipe, MomentFromNowPipe,
-        OrderByPipe, PadNumberPipe, Percent2Pipe,
-        SafeHtmlPipe, TimeStringPipe, TimerPipe,
-        TrackByFnPipe, UnitPipe], imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule], exports: [BrowserModule, TranslateModule,
-        /* Component Inject (Do not remove) */
-        /* End Component Inject (Do not remove) */
-        /* Directive Inject (Do not remove) */
-        AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
-        AutoResetDirective, BackButtonDirective, DetectScrollDirective,
-        DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
-        MinGreaterThanDirective, NgInitDirective, NgVarDirective,
-        /* End Directive Inject (Do not remove) */
-        /* Pipe Inject (Do not remove) */
-        CapitalizeFirstPipe, ClonePipe, CommasPipe,
-        ConvertPercentPipe, EmojiPipe, EmptyPipe,
-        FileSizePipe, FilterPipe, Filter2Pipe,
-        FindPipe, FixedPipe, FlagIconPipe,
-        HourMeridiemPipe, ImagePipe, IncludesPipe,
-        IsContrastPipe, IsFinitePipe, KUnitPipe,
-        LinkPipe, MarkTextPipe, MaxPipe,
-        MinPipe, MomentDatePipe, MomentFromNowPipe,
-        OrderByPipe, PadNumberPipe, Percent2Pipe,
-        SafeHtmlPipe, TimeStringPipe, TimerPipe,
-        TrackByFnPipe, UnitPipe] }); })();
-
-function appInitializerFactory(translateService, localeService, injector) {
-    return () => new Promise((resolve) => {
-        const locationInitialized = injector.get(LOCATION_INITIALIZED, Promise.resolve());
-        const dateTimeConfig = injector.get(DATE_TIME_CONFIG);
-        const locale = localeService.locale;
-        locationInitialized.then(() => {
-            // Set moment timezone
-            moment.tz.setDefault(dateTimeConfig.timezone);
-            // Set moment language
-            moment.locale(locale);
-            // This language will be used as a fallback when a translation isn't found in the current language
-            const langToSet = _.toLower(locale.substring(0, 2));
-            translateService.setDefaultLang(langToSet);
-            translateService.use(langToSet).subscribe(() => console.info(`Successfully initialized '${langToSet}' language.'`), () => console.error(`Problem with '${langToSet}' language initialization.'`), resolve);
-        });
-    });
-}
-
-class CustomMissingTranslationHandler {
-    /**
-     * @param {MissingTranslationHandlerParams} params
-     * @return {string}
-     */
-    handle(params) {
-        isDevMode() && console.error(params);
-        return '';
-    }
-}
-
-class MultiTranslateHttpLoader {
-    /**
-     * @constructor
-     * @param {{prefix: string, suffix: string }[]} resources
-     * @param {HttpClient} _http
-     */
-    constructor(resources = [{ prefix: 'assets/i18n/', suffix: '.json' }], _http) {
-        this.resources = resources;
-        this._http = _http;
-    }
-    /**
-     * @param {string} lang
-     * @return {Observable<Record<string, unknown>>}
-     */
-    getTranslation(lang) {
-        return forkJoin(_.map(this.resources, (config) => this._http.get(`${config.prefix}${lang}${config.suffix}`)))
-            .pipe(take(1), map((response) => _.reduce(response, (a, b) => _.assign(a, b))));
-    }
-}
-__decorate([
-    Memoize(),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", Observable)
-], MultiTranslateHttpLoader.prototype, "getTranslation", null);
-
-// @dynamic
-class FormHelper {
-    /**
-     * @static
-     * @param {any} value
-     * @return {any}
-     */
-    static copyField(value) {
-        let v;
-        switch (typeof value) {
-            case 'object':
-                v = _.assign({}, value);
-                break;
-            case 'number':
-                v = Number(value);
-                break;
-            default:
-                v = _.slice(value, 0, value?.length);
-                break;
-        }
-        return v;
-    }
-    /**
-     * @static
-     * @param {FormGroup} form
-     * @param {boolean=} resetValue - Flag to reset value
-     * @return {void}
-     */
-    static resetForm(form, resetValue = false) {
-        resetValue && form.reset();
-        form.markAsPristine();
-        form.markAsUntouched();
-    }
-}
-
 class StorageService {
     /**
      * @constructor
@@ -3120,6 +2916,225 @@ WebSocketService.ɵprov = /*@__PURE__*/ i0.ɵɵdefineInjectable({ token: WebSock
                 type: Inject,
                 args: [STORAGE_CONFIG]
             }] }, { type: StorageService }]; }, null); })();
+
+function appInitializerFactory(translateService, localeService, injector) {
+    return () => new Promise((resolve) => {
+        const locationInitialized = injector.get(LOCATION_INITIALIZED, Promise.resolve());
+        const dateTimeConfig = injector.get(DATE_TIME_CONFIG);
+        const locale = localeService.locale;
+        locationInitialized.then(() => {
+            // Set moment timezone
+            moment.tz.setDefault(dateTimeConfig.timezone);
+            // Set moment language
+            moment.locale(locale);
+            // This language will be used as a fallback when a translation isn't found in the current language
+            const langToSet = _.toLower(locale.substring(0, 2));
+            translateService.setDefaultLang(langToSet);
+            translateService.use(langToSet).subscribe(() => console.info(`Successfully initialized '${langToSet}' language.'`), () => console.error(`Problem with '${langToSet}' language initialization.'`), resolve);
+        });
+    });
+}
+
+class CoreModule {
+}
+CoreModule.ɵfac = function CoreModule_Factory(t) { return new (t || CoreModule)(); };
+CoreModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CoreModule });
+CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
+        {
+            provide: APP_INITIALIZER,
+            useFactory: appInitializerFactory,
+            deps: [TranslateService, LocaleService, Injector],
+            multi: true,
+        },
+        CookieService,
+        /* Service Inject (Do not remove) */
+        ApiService, CanDeactivateGuardService, LocaleService,
+        LoopService, MediaService, NetworkService,
+        PageService, ServiceWorkerService, SharedService,
+        StorageService, WebNotificationService, WebSocketService,
+        /* End Service Inject (Do not remove) */
+    ], imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule, BrowserModule, TranslateModule] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CoreModule, [{
+        type: NgModule,
+        args: [{
+                imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule],
+                exports: [
+                    BrowserModule, TranslateModule,
+                    /* Component Inject (Do not remove) */
+                    /* End Component Inject (Do not remove) */
+                    /* Directive Inject (Do not remove) */
+                    AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
+                    AutoResetDirective, BackButtonDirective, DetectScrollDirective,
+                    DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
+                    MinGreaterThanDirective, NgInitDirective, NgVarDirective,
+                    /* End Directive Inject (Do not remove) */
+                    /* Pipe Inject (Do not remove) */
+                    CapitalizeFirstPipe, ClonePipe, CommasPipe,
+                    ConvertPercentPipe, EmojiPipe, EmptyPipe,
+                    FileSizePipe, FilterPipe, Filter2Pipe,
+                    FindPipe, FixedPipe, FlagIconPipe,
+                    HourMeridiemPipe, ImagePipe, IncludesPipe,
+                    IsContrastPipe, IsFinitePipe, KUnitPipe,
+                    LinkPipe, MarkTextPipe, MaxPipe,
+                    MinPipe, MomentDatePipe, MomentFromNowPipe,
+                    OrderByPipe, PadNumberPipe, Percent2Pipe,
+                    SafeHtmlPipe, TimeStringPipe, TimerPipe,
+                    TrackByFnPipe, UnitPipe,
+                    /* End Pipe Inject (Do not remove) */
+                ],
+                declarations: [
+                    /* Component Inject (Do not remove) */
+                    /* End Component Inject (Do not remove) */
+                    /* Directive Inject (Do not remove) */
+                    AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
+                    AutoResetDirective, BackButtonDirective, DetectScrollDirective,
+                    DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
+                    MinGreaterThanDirective, NgInitDirective, NgVarDirective,
+                    /* End Directive Inject (Do not remove) */
+                    /* Pipe Inject (Do not remove) */
+                    CapitalizeFirstPipe, ClonePipe, CommasPipe,
+                    ConvertPercentPipe, EmojiPipe, EmptyPipe,
+                    FileSizePipe, FilterPipe, Filter2Pipe,
+                    FindPipe, FixedPipe, FlagIconPipe,
+                    HourMeridiemPipe, ImagePipe, IncludesPipe,
+                    IsContrastPipe, IsFinitePipe, KUnitPipe,
+                    LinkPipe, MarkTextPipe, MaxPipe,
+                    MinPipe, MomentDatePipe, MomentFromNowPipe,
+                    OrderByPipe, PadNumberPipe, Percent2Pipe,
+                    SafeHtmlPipe, TimeStringPipe, TimerPipe,
+                    TrackByFnPipe, UnitPipe,
+                    /* End Pipe Inject (Do not remove) */
+                ],
+                providers: [
+                    {
+                        provide: APP_INITIALIZER,
+                        useFactory: appInitializerFactory,
+                        deps: [TranslateService, LocaleService, Injector],
+                        multi: true,
+                    },
+                    CookieService,
+                    /* Service Inject (Do not remove) */
+                    ApiService, CanDeactivateGuardService, LocaleService,
+                    LoopService, MediaService, NetworkService,
+                    PageService, ServiceWorkerService, SharedService,
+                    StorageService, WebNotificationService, WebSocketService,
+                    /* End Service Inject (Do not remove) */
+                ],
+            }]
+    }], null, null); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CoreModule, { declarations: [
+        /* Component Inject (Do not remove) */
+        /* End Component Inject (Do not remove) */
+        /* Directive Inject (Do not remove) */
+        AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
+        AutoResetDirective, BackButtonDirective, DetectScrollDirective,
+        DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
+        MinGreaterThanDirective, NgInitDirective, NgVarDirective,
+        /* End Directive Inject (Do not remove) */
+        /* Pipe Inject (Do not remove) */
+        CapitalizeFirstPipe, ClonePipe, CommasPipe,
+        ConvertPercentPipe, EmojiPipe, EmptyPipe,
+        FileSizePipe, FilterPipe, Filter2Pipe,
+        FindPipe, FixedPipe, FlagIconPipe,
+        HourMeridiemPipe, ImagePipe, IncludesPipe,
+        IsContrastPipe, IsFinitePipe, KUnitPipe,
+        LinkPipe, MarkTextPipe, MaxPipe,
+        MinPipe, MomentDatePipe, MomentFromNowPipe,
+        OrderByPipe, PadNumberPipe, Percent2Pipe,
+        SafeHtmlPipe, TimeStringPipe, TimerPipe,
+        TrackByFnPipe, UnitPipe], imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule], exports: [BrowserModule, TranslateModule,
+        /* Component Inject (Do not remove) */
+        /* End Component Inject (Do not remove) */
+        /* Directive Inject (Do not remove) */
+        AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
+        AutoResetDirective, BackButtonDirective, DetectScrollDirective,
+        DisableControlDirective, FullscreenDirective, MaxLessThanDirective,
+        MinGreaterThanDirective, NgInitDirective, NgVarDirective,
+        /* End Directive Inject (Do not remove) */
+        /* Pipe Inject (Do not remove) */
+        CapitalizeFirstPipe, ClonePipe, CommasPipe,
+        ConvertPercentPipe, EmojiPipe, EmptyPipe,
+        FileSizePipe, FilterPipe, Filter2Pipe,
+        FindPipe, FixedPipe, FlagIconPipe,
+        HourMeridiemPipe, ImagePipe, IncludesPipe,
+        IsContrastPipe, IsFinitePipe, KUnitPipe,
+        LinkPipe, MarkTextPipe, MaxPipe,
+        MinPipe, MomentDatePipe, MomentFromNowPipe,
+        OrderByPipe, PadNumberPipe, Percent2Pipe,
+        SafeHtmlPipe, TimeStringPipe, TimerPipe,
+        TrackByFnPipe, UnitPipe] }); })();
+
+class CustomMissingTranslationHandler {
+    /**
+     * @param {MissingTranslationHandlerParams} params
+     * @return {string}
+     */
+    handle(params) {
+        isDevMode() && console.error(params);
+        return '';
+    }
+}
+
+class MultiTranslateHttpLoader {
+    /**
+     * @constructor
+     * @param {{prefix: string, suffix: string }[]} resources
+     * @param {HttpClient} _http
+     */
+    constructor(resources = [{ prefix: 'assets/i18n/', suffix: '.json' }], _http) {
+        this.resources = resources;
+        this._http = _http;
+    }
+    /**
+     * @param {string} lang
+     * @return {Observable<Record<string, unknown>>}
+     */
+    getTranslation(lang) {
+        return forkJoin(_.map(this.resources, (config) => this._http.get(`${config.prefix}${lang}${config.suffix}`)))
+            .pipe(take(1), map((response) => _.reduce(response, (a, b) => _.assign(a, b))));
+    }
+}
+__decorate([
+    Memoize(),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Observable)
+], MultiTranslateHttpLoader.prototype, "getTranslation", null);
+
+// @dynamic
+class FormHelper {
+    /**
+     * @static
+     * @param {any} value
+     * @return {any}
+     */
+    static copyField(value) {
+        let v;
+        switch (typeof value) {
+            case 'object':
+                v = _.assign({}, value);
+                break;
+            case 'number':
+                v = Number(value);
+                break;
+            default:
+                v = _.slice(value, 0, value?.length);
+                break;
+        }
+        return v;
+    }
+    /**
+     * @static
+     * @param {FormGroup} form
+     * @param {boolean=} resetValue - Flag to reset value
+     * @return {void}
+     */
+    static resetForm(form, resetValue = false) {
+        resetValue && form.reset();
+        form.markAsPristine();
+        form.markAsUntouched();
+    }
+}
 
 /**
  * Generated bundle index. Do not edit.

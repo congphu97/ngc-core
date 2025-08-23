@@ -33,7 +33,7 @@ import {
 	PageService, ServiceWorkerService, SharedService,
 	StorageService, WebNotificationService, WebSocketService
 } from './services';
-import { appInitializerFactory } from 'public_api';
+import { appInitializerFactory } from './loaders/app-initializer-factory';
 
 @NgModule({
 	imports: [ HttpClientModule, RouterModule, BrowserModule, TranslateModule ],
