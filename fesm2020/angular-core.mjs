@@ -12,8 +12,6 @@ import * as i1$6 from '@angular/router';
 import { RouterModule } from '@angular/router';
 import * as i1$5 from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
-import * as i1$3 from 'ngx-cookie-service';
-import { CookieService } from 'ngx-cookie-service';
 import { __decorate, __metadata } from 'tslib';
 import { coerceArray, coerceBooleanProperty, coerceCssPixelValue, coerceElement, coerceNumberProperty } from '@angular/cdk/coercion';
 import { takeUntil, take, map, takeWhile, finalize, filter, single } from 'rxjs/operators';
@@ -21,6 +19,7 @@ import * as i1$1 from '@angular/forms';
 import { NG_VALIDATORS } from '@angular/forms';
 import * as i1 from '@angular/common';
 import { PercentPipe, LOCATION_INITIALIZED } from '@angular/common';
+import * as i1$3 from 'ngx-cookie-service';
 import vi from 'moment/locale/vi';
 import * as i1$7 from '@angular/service-worker';
 import io from 'socket.io-client';
@@ -2026,21 +2025,7 @@ class CoreModule {
 }
 CoreModule.ɵfac = function CoreModule_Factory(t) { return new (t || CoreModule)(); };
 CoreModule.ɵmod = /*@__PURE__*/ i0.ɵɵdefineNgModule({ type: CoreModule });
-CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
-        // {
-        // 	provide		: APP_INITIALIZER,
-        // 	useFactory	: appInitializerFactory,
-        // 	deps		: [ TranslateService, LocaleService, Injector ],
-        // 	multi		: true,
-        // },
-        CookieService,
-        /* Service Inject (Do not remove) */
-        // ApiService, CanDeactivateGuardService, LocaleService,
-        // LoopService, MediaService, NetworkService,
-        // PageService, ServiceWorkerService, SharedService,
-        // StorageService, WebNotificationService, WebSocketService,
-        /* End Service Inject (Do not remove) */
-    ], imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule, BrowserModule, TranslateModule] });
+CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule, BrowserModule, TranslateModule] });
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(CoreModule, [{
         type: NgModule,
         args: [{
@@ -2093,19 +2078,19 @@ CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
                     /* End Pipe Inject (Do not remove) */
                 ],
                 providers: [
-                    // {
-                    // 	provide		: APP_INITIALIZER,
-                    // 	useFactory	: appInitializerFactory,
-                    // 	deps		: [ TranslateService, LocaleService, Injector ],
-                    // 	multi		: true,
-                    // },
-                    CookieService,
-                    /* Service Inject (Do not remove) */
-                    // ApiService, CanDeactivateGuardService, LocaleService,
-                    // LoopService, MediaService, NetworkService,
-                    // PageService, ServiceWorkerService, SharedService,
-                    // StorageService, WebNotificationService, WebSocketService,
-                    /* End Service Inject (Do not remove) */
+                // {
+                // 	provide		: APP_INITIALIZER,
+                // 	useFactory	: appInitializerFactory,
+                // 	deps		: [ TranslateService, LocaleService, Injector ],
+                // 	multi		: true,
+                // },
+                // CookieService,
+                /* Service Inject (Do not remove) */
+                // ApiService, CanDeactivateGuardService, LocaleService,
+                // LoopService, MediaService, NetworkService,
+                // PageService, ServiceWorkerService, SharedService,
+                // StorageService, WebNotificationService, WebSocketService,
+                /* End Service Inject (Do not remove) */
                 ],
             }]
     }], null, null); })();
