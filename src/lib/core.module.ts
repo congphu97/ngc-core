@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { CookieService } from 'ngx-cookie-service';
+// import { CookieService } from 'ngx-cookie-service';
 
 import {
 	AdjustFontsizeDirective, AspectRatioDirective, AutoFocusDirective,
@@ -90,7 +90,7 @@ import {
 		// 	multi		: true,
 		// },
 
-		CookieService,
+		// CookieService,
 
 		/* Service Inject (Do not remove) */
 		// ApiService, CanDeactivateGuardService, LocaleService,
