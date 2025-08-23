@@ -3,6 +3,7 @@ export * from './lodash-mixin';
 export { CoreModule } from './core.module';
 export * from './decorators';
 export * from './resources';
+export * from './injection-token';
 export * from './loaders';
 export * from './helpers';
 export * from './services';

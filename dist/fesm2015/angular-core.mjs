@@ -2,23 +2,23 @@ import { Observable, Subject, ReplaySubject, merge, fromEvent, interval, Subscri
 import CryptoJS from 'crypto-js';
 import moment from 'moment-timezone';
 import _ from 'lodash';
-import * as i0 from '@angular/core';
-import { InjectionToken, Directive, Input, HostListener, EventEmitter, Output, Pipe, Optional, Inject, Injectable, APP_INITIALIZER, Injector, NgModule, isDevMode } from '@angular/core';
-import * as i1$6 from '@angular/router';
-import { RouterModule } from '@angular/router';
-import * as i1$2 from '@angular/platform-browser';
-import { BrowserModule } from '@angular/platform-browser';
 import * as i1$4 from '@angular/common/http';
 import { HttpHeaders, HttpClientModule } from '@angular/common/http';
+import * as i0 from '@angular/core';
+import { Directive, Input, HostListener, EventEmitter, Output, InjectionToken, Pipe, Optional, Inject, Injectable, APP_INITIALIZER, Injector, NgModule, isDevMode } from '@angular/core';
+import * as i1$2 from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import * as i1$6 from '@angular/router';
+import { RouterModule } from '@angular/router';
 import * as i1$5 from '@ngx-translate/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import * as i1$3 from 'ngx-cookie-service';
 import { CookieService } from 'ngx-cookie-service';
-import * as i1 from '@angular/common';
-import { LOCATION_INITIALIZED, PercentPipe } from '@angular/common';
 import { __decorate, __metadata } from 'tslib';
 import { coerceArray, coerceBooleanProperty, coerceCssPixelValue, coerceElement, coerceNumberProperty } from '@angular/cdk/coercion';
 import { takeUntil, takeWhile, take, finalize, map, filter, single } from 'rxjs/operators';
+import * as i1 from '@angular/common';
+import { LOCATION_INITIALIZED, PercentPipe } from '@angular/common';
 import * as i1$1 from '@angular/forms';
 import { NG_VALIDATORS } from '@angular/forms';
 import vi from 'moment/locale/vi';
@@ -244,69 +244,6 @@ const LODASH_MIXIN = {
     },
 };
 _.mixin(LODASH_MIXIN);
-
-class AppConfig {
-    get name() { return this._name; }
-    set name(value) { this._name = value; }
-    get logo() { return this._logo; }
-    set logo(value) { this._logo = value; }
-    get url() { return this._url; }
-    set url(value) { this._url = value; }
-    get locale() { return this._locale; }
-    set locale(value) { this._locale = value; }
-    get mainPath() { return this._mainPath; }
-    set mainPath(value) { this._mainPath = value; }
-}
-class ServerConfig {
-    get apiURL() { return this._apiURL; }
-    set apiURL(value) { this._apiURL = value; }
-    get wsURL() { return this._wsURL; }
-    set wsURL(value) { this._wsURL = value; }
-    get fcmPublicKey() { return this._fcmPublicKey; }
-    set fcmPublicKey(value) { this._fcmPublicKey = value; }
-    get fcmSubscriptionEndpoint() { return this._fcmSubscriptionEndpoint; }
-    set fcmSubscriptionEndpoint(value) { this._fcmSubscriptionEndpoint = value; }
-}
-class DateTimeConfig {
-    get timezone() { return this._timezone; }
-    set timezone(value) { this._timezone = value; }
-    get dateFormat() { return this._dateFormat; }
-    set dateFormat(value) { this._dateFormat = value; }
-    get timeFormat() { return this._timeFormat; }
-    set timeFormat(value) { this._timeFormat = value; }
-    get weekStart() { return this._weekStart; }
-    set weekStart(value) { this._weekStart = value; }
-}
-class StorageConfig {
-    get authorizedKey() { return this._authorizedKey; }
-    set authorizedKey(value) { this._authorizedKey = value; }
-    get hashKey() { return this._hashKey; }
-    set hashKey(value) { this._hashKey = value; }
-    get expireDays() { return this._expireDays; }
-    set expireDays(value) { this._expireDays = value; }
-}
-const APP_CONFIG = new InjectionToken('APP_CONFIG');
-const SERVER_CONFIG = new InjectionToken('SERVER_CONFIG');
-const DATE_TIME_CONFIG = new InjectionToken('DATE_TIME_CONFIG');
-const STORAGE_CONFIG = new InjectionToken('STORAGE_CONFIG');
-
-function appInitializerFactory(translateService, localeService, injector) {
-    return () => new Promise((resolve) => {
-        const locationInitialized = injector.get(LOCATION_INITIALIZED, Promise.resolve());
-        const dateTimeConfig = injector.get(DATE_TIME_CONFIG);
-        const locale = localeService.locale;
-        locationInitialized.then(() => {
-            // Set moment timezone
-            moment.tz.setDefault(dateTimeConfig.timezone);
-            // Set moment language
-            moment.locale(locale);
-            // This language will be used as a fallback when a translation isn't found in the current language
-            const langToSet = _.toLower(locale.substring(0, 2));
-            translateService.setDefaultLang(langToSet);
-            translateService.use(langToSet).subscribe(() => console.info(`Successfully initialized '${langToSet}' language.'`), () => console.error(`Problem with '${langToSet}' language initialization.'`), resolve);
-        });
-    });
-}
 
 class AdjustFontsizeDirective {
     /**
@@ -1112,6 +1049,69 @@ NgVarDirective.ɵdir = /*@__PURE__*/ i0.ɵɵdefineDirective({ type: NgVarDirecti
                 type: Input
             }] });
 })();
+
+class AppConfig {
+    get name() { return this._name; }
+    set name(value) { this._name = value; }
+    get logo() { return this._logo; }
+    set logo(value) { this._logo = value; }
+    get url() { return this._url; }
+    set url(value) { this._url = value; }
+    get locale() { return this._locale; }
+    set locale(value) { this._locale = value; }
+    get mainPath() { return this._mainPath; }
+    set mainPath(value) { this._mainPath = value; }
+}
+class ServerConfig {
+    get apiURL() { return this._apiURL; }
+    set apiURL(value) { this._apiURL = value; }
+    get wsURL() { return this._wsURL; }
+    set wsURL(value) { this._wsURL = value; }
+    get fcmPublicKey() { return this._fcmPublicKey; }
+    set fcmPublicKey(value) { this._fcmPublicKey = value; }
+    get fcmSubscriptionEndpoint() { return this._fcmSubscriptionEndpoint; }
+    set fcmSubscriptionEndpoint(value) { this._fcmSubscriptionEndpoint = value; }
+}
+class DateTimeConfig {
+    get timezone() { return this._timezone; }
+    set timezone(value) { this._timezone = value; }
+    get dateFormat() { return this._dateFormat; }
+    set dateFormat(value) { this._dateFormat = value; }
+    get timeFormat() { return this._timeFormat; }
+    set timeFormat(value) { this._timeFormat = value; }
+    get weekStart() { return this._weekStart; }
+    set weekStart(value) { this._weekStart = value; }
+}
+class StorageConfig {
+    get authorizedKey() { return this._authorizedKey; }
+    set authorizedKey(value) { this._authorizedKey = value; }
+    get hashKey() { return this._hashKey; }
+    set hashKey(value) { this._hashKey = value; }
+    get expireDays() { return this._expireDays; }
+    set expireDays(value) { this._expireDays = value; }
+}
+const APP_CONFIG = new InjectionToken('APP_CONFIG');
+const SERVER_CONFIG = new InjectionToken('SERVER_CONFIG');
+const DATE_TIME_CONFIG = new InjectionToken('DATE_TIME_CONFIG');
+const STORAGE_CONFIG = new InjectionToken('STORAGE_CONFIG');
+
+function appInitializerFactory(translateService, localeService, injector) {
+    return () => new Promise((resolve) => {
+        const locationInitialized = injector.get(LOCATION_INITIALIZED, Promise.resolve());
+        const dateTimeConfig = injector.get(DATE_TIME_CONFIG);
+        const locale = localeService.locale;
+        locationInitialized.then(() => {
+            // Set moment timezone
+            moment.tz.setDefault(dateTimeConfig.timezone);
+            // Set moment language
+            moment.locale(locale);
+            // This language will be used as a fallback when a translation isn't found in the current language
+            const langToSet = _.toLower(locale.substring(0, 2));
+            translateService.setDefaultLang(langToSet);
+            translateService.use(langToSet).subscribe(() => console.info(`Successfully initialized '${langToSet}' language.'`), () => console.error(`Problem with '${langToSet}' language initialization.'`), resolve);
+        });
+    });
+}
 
 class EmptyPipe {
     /**
@@ -3081,10 +3081,10 @@ CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
         },
         CookieService,
         /* Service Inject (Do not remove) */
-        ApiService, CanDeactivateGuardService, LocaleService,
-        LoopService, MediaService, NetworkService,
-        PageService, ServiceWorkerService, SharedService,
-        StorageService, WebNotificationService, WebSocketService,
+        // ApiService, CanDeactivateGuardService, LocaleService,
+        // LoopService, MediaService, NetworkService,
+        // PageService, ServiceWorkerService, SharedService,
+        // StorageService, WebNotificationService, WebSocketService,
         /* End Service Inject (Do not remove) */
     ], imports: [HttpClientModule, RouterModule, BrowserModule, TranslateModule, BrowserModule, TranslateModule] });
 (function () {
@@ -3148,10 +3148,10 @@ CoreModule.ɵinj = /*@__PURE__*/ i0.ɵɵdefineInjector({ providers: [
                         },
                         CookieService,
                         /* Service Inject (Do not remove) */
-                        ApiService, CanDeactivateGuardService, LocaleService,
-                        LoopService, MediaService, NetworkService,
-                        PageService, ServiceWorkerService, SharedService,
-                        StorageService, WebNotificationService, WebSocketService,
+                        // ApiService, CanDeactivateGuardService, LocaleService,
+                        // LoopService, MediaService, NetworkService,
+                        // PageService, ServiceWorkerService, SharedService,
+                        // StorageService, WebNotificationService, WebSocketService,
                         /* End Service Inject (Do not remove) */
                     ],
                 }]
@@ -3278,5 +3278,5 @@ class FormHelper {
  * Generated bundle index. Do not edit.
  */
 
-export { AdjustFontsizeDirective, AliasOf, ApiService, AspectRatioDirective, AutoFocusDirective, AutoResetDirective, BackButtonDirective, CONSTANT, CanDeactivateGuardService, CapitalizeFirstPipe, ClonePipe, CoerceArray, CoerceBoolean, CoerceCssPixel, CoerceElement, CoerceNumber, CommasPipe, Constants, ConvertPercentPipe, CoreModule, CustomMissingTranslationHandler, DESTROY_CMP_SUBJECT_NAME, DefaultValue, DetectScrollDirective, DisableControlDirective, EmojiPipe, EmptyPipe, FileSizePipe, Filter2Pipe, FilterPipe, FindPipe, FixedPipe, FlagIconPipe, FormHelper, FullscreenDirective, HourMeridiemPipe, ImagePipe, IncludesPipe, IsContrastPipe, IsFinitePipe, KUnitPipe, LODASH_MIXIN, LinkPipe, LocaleService, LoopService, MarkTextPipe, MaxLessThanDirective, MaxPipe, MediaService, Memoize, MinGreaterThanDirective, MinPipe, MomentDatePipe, MomentFromNowPipe, MultiTranslateHttpLoader, NetworkService, NgInitDirective, NgVarDirective, OrderByPipe, PadNumberPipe, PageService, Percent2Pipe, REGEX, SafeHtmlPipe, ServiceWorkerService, SharedService, StorageService, TimeStringPipe, TimerPipe, TrackByFnPipe, UnitPipe, Unsubscriber, WebNotificationService, WebSocketService, appInitializerFactory, destroyCmp, untilCmpDestroyed };
+export { APP_CONFIG, AdjustFontsizeDirective, AliasOf, ApiService, AppConfig, AspectRatioDirective, AutoFocusDirective, AutoResetDirective, BackButtonDirective, CONSTANT, CanDeactivateGuardService, CapitalizeFirstPipe, ClonePipe, CoerceArray, CoerceBoolean, CoerceCssPixel, CoerceElement, CoerceNumber, CommasPipe, Constants, ConvertPercentPipe, CoreModule, CustomMissingTranslationHandler, DATE_TIME_CONFIG, DESTROY_CMP_SUBJECT_NAME, DateTimeConfig, DefaultValue, DetectScrollDirective, DisableControlDirective, EmojiPipe, EmptyPipe, FileSizePipe, Filter2Pipe, FilterPipe, FindPipe, FixedPipe, FlagIconPipe, FormHelper, FullscreenDirective, HourMeridiemPipe, ImagePipe, IncludesPipe, IsContrastPipe, IsFinitePipe, KUnitPipe, LODASH_MIXIN, LinkPipe, LocaleService, LoopService, MarkTextPipe, MaxLessThanDirective, MaxPipe, MediaService, Memoize, MinGreaterThanDirective, MinPipe, MomentDatePipe, MomentFromNowPipe, MultiTranslateHttpLoader, NetworkService, NgInitDirective, NgVarDirective, OrderByPipe, PadNumberPipe, PageService, Percent2Pipe, REGEX, SERVER_CONFIG, STORAGE_CONFIG, SafeHtmlPipe, ServerConfig, ServiceWorkerService, SharedService, StorageConfig, StorageService, TimeStringPipe, TimerPipe, TrackByFnPipe, UnitPipe, Unsubscriber, WebNotificationService, WebSocketService, appInitializerFactory, destroyCmp, untilCmpDestroyed };
 //# sourceMappingURL=angular-core.mjs.map
